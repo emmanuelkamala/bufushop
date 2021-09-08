@@ -1,6 +1,7 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { SliderItems } from '../data';
 
 const Container = styled.div`
   width: 100%;
@@ -25,10 +26,12 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
+  z-index: 2;
 `
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
+  transform: translateX(0);
 `
 const Slide = styled.div`
   width: 100vw;
@@ -67,44 +70,34 @@ const Button = styled.button`
 
 
 const Slider = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {
+
+  }
   return (
     <Container>
-      <Arrow direction='left'>
+      <Arrow direction='left' onClick={()=>handleClick("right")}>
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper>
-        <Slide bg='f5fafd'>
-          <ImgContainer>
-            <Image src='https://siamagazin.com/wp-content/uploads/2021/03/34h5t22rereerer-min.jpg' />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>Ofa Mpya</Title>
-            <Desc>Bidhaa bora kabisa za spare zapatikana BufuShop</Desc>
-            <Button>Nunua Sasa</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg='fcf1ed'>
-          <ImgContainer>
-            <Image src='https://www.bikesmedia.in/uploads/image/reviews/2014/dec/clutch-assembly.jpg' />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>Bidhaa Inayouza Sana</Title>
-            <Desc>BufuShop inakupa punguzo zuri la bei</Desc>
-            <Button>Nunua Sasa</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg='fbf0f4'>
-          <ImgContainer>
-            <Image src='https://wp.bikebandit.com/wp-content/uploads/2019/06/Depositphotos_19208081_l-2015-1024x680.jpg' />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>Bidhaa Maradufu</Title>
-            <Desc>Sehemu pekee ya kupata ubora ni BufuShop</Desc>
-            <Button>Nunua Sasa</Button>
-          </InfoContainer>
-        </Slide>
+        {
+          SliderItems.map(item => (
+            <Slide bg={item.bg}>
+              <ImgContainer>
+                <Image src={item.img} />
+              </ImgContainer>
+              <InfoContainer>
+                <Title>{item.title}</Title>
+                <Desc>{item.desc}</Desc>
+                <Button>Nunua Sasa</Button>
+              </InfoContainer>
+            </Slide>
+          ))
+        }
+        
+        
       </Wrapper>
-      <Arrow direction='right'>
+      <Arrow direction='right' onClick={()=>handleClick("right")}>
         <ArrowRightOutlined />
       </Arrow>
     </Container>
