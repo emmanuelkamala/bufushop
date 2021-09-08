@@ -1,4 +1,4 @@
-export const SliderItems = [
+export const sliderItems = [
   {
     id: 1,
     img: 'https://siamagazin.com/wp-content/uploads/2021/03/34h5t22rereerer-min.jpg',
