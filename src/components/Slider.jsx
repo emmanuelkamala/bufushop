@@ -31,7 +31,7 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transition: all 1.5s ease;
+  transition: all 2s ease;
   transform: translateX(${props => props.slideIndex * -100}vw);
 `
 const Slide = styled.div`
@@ -75,13 +75,13 @@ const Slider = () => {
     if (direction === 'left') {
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
     } else {
-      setSlideIndex(slideIndex > 2 ? slideIndex + 1 : 0)
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0)
     }
   }
 
   return (
     <Container>
-      <Arrow direction='left' onClick={()=>handleClick('right')}>
+      <Arrow direction='left' onClick={()=>handleClick('left')}>
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>

@@ -72,8 +72,8 @@ const Navbar = () => {
           <Logo>BufuShop</Logo>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Sign In</MenuItem>
+          <MenuItem>Sajili</MenuItem>
+          <MenuItem>Ingia</MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
