@@ -5,7 +5,7 @@ import { sliderItems } from '../data';
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -13,7 +13,7 @@ const Container = styled.div`
 const Arrow = styled.div`
   width: 50px;
   height: 50px;
-  background-color: #fff7f7;
+  background-color: #8FBC8F;
   border-radius: 50%;
   display: flex;
   align-items: center;
