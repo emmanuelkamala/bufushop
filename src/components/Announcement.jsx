@@ -3,7 +3,7 @@ import React from 'react';
 
 const Container = styled.div`
   height: 30px;
-  background-color: teal;
+  background-color: rgb(2, 165, 165);
   color: white;
   display: flex;
   align-items: center;
