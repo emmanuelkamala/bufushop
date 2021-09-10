@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   height: 100px;
+  background-color: rgb(1, 117, 117);
+  color: whitesmoke;
 `
 
 const Wrapper = styled.div`
@@ -19,7 +21,7 @@ const Left = styled.div`
   align-items: center;
 `
 const SearchContainer = styled.div`
-  border: 0.5px solid lightgray;
+  border: 0.3px solid lightgray;
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -30,6 +32,8 @@ const SearchContainer = styled.div`
 const Input = styled.input`
   border: none;
   outline: none;
+  height: 100%;
+  background-color: transparent;
 `
 
 const Language = styled.span`
