@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   padding: 20px;
   justify-content: space-between;
-  background-color: #8FBC8F;
+  background-color: #a5d6a5;
 `
 
 const Categories = () => {
@@ -15,7 +15,7 @@ const Categories = () => {
     <Container>
       {
         categories.map(item => (
-          <CategoryItem item={item} />
+          <CategoryItem item={item} key={item.id} />
         ))
       }
     </Container>
