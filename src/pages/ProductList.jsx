@@ -29,6 +29,7 @@ const Select = styled.select`
   padding: 10px;
   margin-right: 20px;
   outline: none;
+  border-radius: 5px;
 `
 
 const Option = styled.option`
