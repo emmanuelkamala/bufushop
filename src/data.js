@@ -2,22 +2,22 @@ export const sliderItems = [
   {
     id: 1,
     img: 'https://siamagazin.com/wp-content/uploads/2021/03/34h5t22rereerer-min.jpg',
-    title: 'Ofa Mpya',
-    desc: 'Bidhaa bora kabisa za spare zapatikana BufuShop',
+    title: 'New Offer',
+    desc: 'Best Spare Parts Available at BufuShop',
     bg: 'f5fafd'
   },
   {
     id: 2,
     img: 'https://www.bikesmedia.in/uploads/image/reviews/2014/dec/clutch-assembly.jpg',
-    title: 'Bidhaa Inayouza Sana',
-    desc: 'BufuShop inakupa punguzo zuri la bei',
+    title: 'Most Selling Product',
+    desc: 'BufuShop Gives You Great Discount',
     bg: 'fcf1ed'
   },
   {
     id: 3,
     img: 'https://i0.wp.com/mrsmp.com/wp-content/uploads/2019/10/Motorcycle-Spare-Parts-Suplier-China.png?ssl=1',
-    title: 'Bidhaa Maradufu',
-    desc: 'Sehemu pekee ya kupata ubora ni BufuShop',
+    title: 'Best Product',
+    desc: 'Only Place for Quality Spare Parts is at BufuShop',
     bg: 'fbf0f4'
   }
 ]

@@ -4,12 +4,14 @@ import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
 
 `
 const Wrapper = styled.div`
   padding: 20px;
+  ${mobile({ padding: "10px" })}
 `
 const Title = styled.h1`
   font-weight: 300;
@@ -31,7 +33,7 @@ const TopButton = styled.button`
   color: ${props => props.type === "filled" && "white"};
 `
 const TopTexts = styled.div`
-
+${mobile({ display: "none" })}
 `
 const TopText = styled.span`
   text-decoration: underline;
@@ -41,6 +43,7 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: "column" })}
 `
 const Info = styled.div`
   flex: 3;
@@ -48,14 +51,16 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({ flexDirection: "column", marginBottom: "30px" })}
 `
 const ProductDetail = styled.div`
   display: flex;
   flex: 2;
 `
 const Image = styled.img`
-  width: 12vw;
+  width: 10vw;
   object-fit: cover;
+  ${mobile({ height: "100%", width: "50%" })}
 `
 const Details = styled.div`
   display: flex;
@@ -110,6 +115,7 @@ const Hr = styled.hr`
   background-color: #eee;
   border: none;
   height: 1px;
+  width: 80%;
 `
 const Summary = styled.div`
   flex: 1;
@@ -137,9 +143,16 @@ const SummaryItemPrice = styled.span`
 const Button = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: black;
+  background-color: gray;
   color: white;
   font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 10px;
+
+  &:hover{
+    background-color: black;
+    transition: all 0.7s ease-in;
+  }
 `
 const Cart = () => {
   return (

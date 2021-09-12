@@ -1,9 +1,12 @@
 import { EmailOutlined, Facebook, Instagram, LinkedIn, Phone, RoomOutlined } from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   display: flex;
+  background-color: #fff8f5;
+  ${mobile({ flexDirection: "column" })}
 `
 const Left = styled.div`
   flex: 1;
@@ -30,10 +33,12 @@ const SocialIcon = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 10px;
+  cursor: pointer;
 `
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `
 const Title = styled.h3`
   margin-bottom: 30px;
@@ -48,10 +53,12 @@ const List = styled.ul`
 const ListItem = styled.li`
   width: 50%;
   margin-bottom: 10px;
+  cursor: pointer;
 `
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ backgroundColor: "#eee" })}
 `
 const ContactItem = styled.p`
   margin-bottom: 20px;
@@ -81,24 +88,24 @@ const Footer = () => {
         </SocialContainer>
       </Left>
       <Center>
-        <Title>Muhimu</Title>
+        <Title>Useful Links</Title>
         <List>
-          <ListItem>Nyumbani</ListItem>
-          <ListItem>Kikapu</ListItem>
+          <ListItem>Home</ListItem>
+          <ListItem>Cart</ListItem>
           <ListItem>Cylinder</ListItem>
-          <ListItem>Taa za Pikipiki</ListItem>
-          <ListItem>Spea</ListItem>
-          <ListItem>Fuatilia Oda</ListItem>
-          <ListItem>Akaunti Yangu</ListItem>
-          <ListItem>Pendekezo</ListItem>
-          <ListItem>Masharti</ListItem>
-          <ListItem>Kanuni</ListItem>
+          <ListItem>Headlamp</ListItem>
+          <ListItem>Spare parts</ListItem>
+          <ListItem>Check Order</ListItem>
+          <ListItem>My Account</ListItem>
+          <ListItem>Wishlist</ListItem>
+          <ListItem>Terms</ListItem>
+          <ListItem>Policy</ListItem>
         </List>
       </Center>
       <Right>
-        <Title>Mawasiliano</Title>
+        <Title>Contact</Title>
         <ContactItem>
-          <RoomOutlined /> <Span>Mtaa wa Sikukuu, Kariakoo, DSM</Span>
+          <RoomOutlined /> <Span>Sikukuu Street, Kariakoo, DSM</Span>
         </ContactItem>
         <ContactItem>
           <Phone /> <Span>+255713827012</Span>

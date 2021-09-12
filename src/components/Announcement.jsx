@@ -15,7 +15,8 @@ const Container = styled.div`
 const Announcement = () => {
   return (
     <Container>
-      Ofa! Agiza mzigo wa kwanza, tukutumie bila gharama ya usafirishaji!
+      {/* Ofa! Agiza mzigo wa kwanza, tukutumie bila gharama ya usafirishaji! */}
+      Super Deal! Free Shipping on Orders Over 100,000/=
     </Container>
   )
 }

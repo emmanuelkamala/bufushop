@@ -1,6 +1,7 @@
 import { SendOutlined } from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   height: 40vh;
@@ -18,6 +19,7 @@ const Description = styled.div`
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 20px;
+  ${mobile({ textAlign: "center", padding: "0 10px" })}
 `
 const InputContainer = styled.div`
   width: 50%;
@@ -27,6 +29,7 @@ const InputContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   border: 1px solid lightgray;
+  ${mobile({ width: "90%" })}
 `
 const Input = styled.input`
   border: none;
@@ -47,10 +50,10 @@ const Button = styled.button`
 const Newsletter = () => {
   return (
     <Container>
-      <Title>Habari</Title>
-      <Description>Pata taarifa zaidi ya bidhaa zako pendwa.</Description>
+      <Title>Newsletter</Title>
+      <Description>Get Latest Info on Your Best Products</Description>
       <InputContainer>
-        <Input placeholder="Andika barua pepe" />
+        <Input placeholder="Enter email address" />
         <Button>
           <SendOutlined />
         </Button>
