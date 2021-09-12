@@ -54,7 +54,7 @@ const ProductDetail = styled.div`
   flex: 2;
 `
 const Image = styled.img`
-  width: 10vw;
+  width: 12vw;
   object-fit: cover;
 `
 const Details = styled.div`
@@ -91,11 +91,19 @@ const ProductAmountContainer = styled.div`
   margin-bottom: 20px;
 `
 const ProductQuantity = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 5px;
+  border: 1px solid teal;
+  padding: 3px;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 const ProductPrice = styled.div`
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 300;
 `
 const Hr = styled.hr`
@@ -105,6 +113,33 @@ const Hr = styled.hr`
 `
 const Summary = styled.div`
   flex: 1;
+  border: 0.5px solid teal;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
+`
+const SummaryTitle = styled.h2`
+  font-weight: 500;
+`
+const SummaryItem = styled.div`
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: ${props => props.type === "total" && "500"};
+  font-size: ${props => props.type === "total" && "1.5rem"};
+`
+const SummaryItemText = styled.span`
+
+`
+const SummaryItemPrice = styled.span`
+
+`
+const Button = styled.button`
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
 `
 const Cart = () => {
   return (
@@ -145,25 +180,44 @@ const Cart = () => {
             <Hr />
             <Product>
               <ProductDetail>
-                <Image src="https://pyxis.nymag.com/v1/imgs/685/70f/5ab8dd9515505f9f05e0eedc3fb4f57bde-helmet.jpg" />
+                <Image src="https://www.baakmotocyclettes.com/6462-large_default/classic-motorcycle-headlight.jpg" />
                 <Details>
-                  <ProductName><b>Product: </b>Helmet</ProductName>
-                  <ProductId><b>ID: </b>768689004</ProductId>
-                  <ProductColor color="blue" />
-                  <ProductSize><b>Size: </b>22.5</ProductSize>
+                  <ProductName><b>Product: </b>Headlamp</ProductName>
+                  <ProductId><b>ID: </b>768685959</ProductId>
+                  <ProductColor color="black" />
+                  <ProductSize><b>Size: </b>M</ProductSize>
                 </Details>
               </ProductDetail>
               <PriceDetail>
                 <ProductAmountContainer>
                   <Remove />
-                  <ProductQuantity>2</ProductQuantity>
+                  <ProductQuantity>1</ProductQuantity>
                   <Add />
                 </ProductAmountContainer>
-                <ProductPrice>10,000/=</ProductPrice>
+                <ProductPrice>15,000/=</ProductPrice>
               </PriceDetail>
             </Product>
           </Info>
-          <Summary>Summary</Summary>
+          <Summary>
+            <SummaryTitle>Order Summary</SummaryTitle>
+            <SummaryItem>
+              <SummaryItemText>Subtotal</SummaryItemText>
+              <SummaryItemPrice>25,000/=</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Estimated Shipping</SummaryItemText>
+              <SummaryItemPrice>5,000/=</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem>
+              <SummaryItemText>Shipping Discount</SummaryItemText>
+              <SummaryItemPrice>-5,000/=</SummaryItemPrice>
+            </SummaryItem>
+            <SummaryItem type="total">
+              <SummaryItemText>Total</SummaryItemText>
+              <SummaryItemPrice>25,000/=</SummaryItemPrice>
+            </SummaryItem>
+            <Button>Checkout Now</Button>
+          </Summary>
         </Bottom>
       </Wrapper>
       <Footer />
