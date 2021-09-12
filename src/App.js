@@ -1,8 +1,9 @@
 // import Home from "./pages/Home";
 // import ProductList from "./pages/ProductList";
 
-//import Product from "./pages/Product";
-import Register from "./pages/Register";
+// import Product from "./pages/Product";
+import Login from "./pages/Login";
+// import Register from "./pages/Register";
 
 
 function App() {
@@ -10,8 +11,9 @@ function App() {
     <div className="App">
       {/* <Home /> 
       <ProductList />
-      <Product />*/}
-      <Register />
+      <Product />
+      <Register />*/}
+      <Login />
     </div>
   );
 }
