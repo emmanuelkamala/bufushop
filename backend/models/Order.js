@@ -7,7 +7,10 @@ const OrderSchema = new mongoose.Schema({
       productId: { type: String },
       quantity: { type: Number, default: 1 }
     }
-  ]
+  ],
+  amount: { type: Number, required: true },
+  address: { type: Object, required: true },
+  isDelivered: { type: String, default: "pending" }
 }, 
   { timestamps: true }
 )
