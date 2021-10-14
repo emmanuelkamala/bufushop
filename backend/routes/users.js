@@ -1,3 +1,9 @@
 import express from 'express';
 
-const router = express.Router();
+const userRouter = express.Router();
+
+userRouter.get('/usertest', (req, res) => {
+  res.send('User send data successfully')
+})
+
+export default userRouter;
