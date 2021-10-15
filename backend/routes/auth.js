@@ -15,7 +15,24 @@ authRouter.post('/register', async (req, res) => {
     const savedUser = await newUser.save();
     res.status(200).json(savedUser);
   } catch (error) {
-    res.status(500).json({ message: error.message })
+    res.status(500).json({ message: error.message });
+  }
+})
+
+authRouter.post('/login', async (req, res) => {
+  try {
+    const user = await User.findOne({ username: req.body.username });
+    !user && res.status(404).json("Wrong credentials");
+
+    const hashedPassword = CryptoJS.AES.decrypt(user.password, process.env.SECRET_KEY);
+    const passwordString = hashedPassword.toString(CryptoJS.enc.Utf8);
+
+    passwordString !== req.body.password && res.status(404).json("Wrong credentials");
+
+    res.status(200).json(user);
+
+  } catch (error) {
+    res.status(500).json({ error: error.message });
   }
 })
 
